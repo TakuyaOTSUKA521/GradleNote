@@ -1,0 +1,71 @@
+\documentclass{ltjsarticle}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{comment}
+\usepackage{color}
+\usepackage{url}
+\usepackage{siunitx}
+\usepackage[version=4]{mhchem}
+\usepackage{paralist}
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{luatexja}
+
+\usepackage{float}
+\usepackage{minted}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{bm}
+\usepackage[superscript]{cite}
+\usepackage{physics}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{wrapfig}
+
+\usepackage{newfloat}
+
+\DeclareFloatingEnvironment[
+  fileext=lol,
+  listname=List of Cord Listings,
+  name=Listing
+]{cord_listing}
+
+\usepackage{enumitem}
+\setlist[description]{parsep=5pt}
+\setlist[enumerate]{parsep=5pt}
+
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+
+
+
+\begin{document}
+
+\section{6/4: Gradle+Kotlin のセットアップ}
+\begin{minted}[frame=single]{bash}
+    gradle --version
+\end{minted}
+でversion の確認を行った，8.x.x だったため，
+\begin{minted}[frame=single]{bash}
+    gradle init
+    ./gradlew wrapper --gradle-version 9.5.1   
+\end{minted}
+を行った．
+\begin{minted}[frame=single]{bash}
+    ./gradlew run    
+\end{minted}
+で\texttt{Hello World!}の出力が得られた．これは，app/src/main/kotlin/org/example/App.kt 内の\texttt{main()}関数が実行されたものである．
+実行される関数は，app/src/build.gradle.kts 内の
+\begin{minted}[frame=single]{kotlin}
+    application {
+        mainClass = "org.example.AppKt"
+    }    
+\end{minted}
+の設定によって決まった．
+
+.../org/example/SerializationDemo.kt を作成して，ライブラリの有効化を試した．
+gradle/libs.versions.toml の\texttt{[plugins]}に追加して，build.gradle.kts の\texttt{plugins}に\texttt{alias()}で追加する．
+同じく\texttt{[libraries]}に追加して，build.gradle.kts の\texttt{dependencies}に\texttt{implementation()}で追加した．
+\end{document}
