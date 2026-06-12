@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k}{import}\PYG{+w}{ }\PYG{n+nn}{kotlinx.serialization.Serializable}
+
+\PYG{+w}{    }\PYG{n+nd}{@Serializable}
+\PYG{+w}{    }\PYG{k+kd}{data}\PYG{+w}{ }\PYG{k+kd}{class}\PYG{+w}{ }\PYG{n+nc}{Task}\PYG{p}{(}
+\PYG{+w}{        }\PYG{k+kd}{val}\PYG{+w}{ }\PYG{n+nv}{id}\PYG{p}{:}\PYG{+w}{ }\PYG{k+kt}{Int}\PYG{p}{,}
+\PYG{+w}{        }\PYG{k+kd}{val}\PYG{+w}{ }\PYG{n+nv}{name}\PYG{p}{:}\PYG{+w}{ }\PYG{k+kt}{String}\PYG{p}{,}
+\PYG{+w}{        }\PYG{k+kd}{val}\PYG{+w}{ }\PYG{n+nv}{done}\PYG{p}{:}\PYG{+w}{ }\PYG{k+kt}{Boolean}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{false}
+\PYG{+w}{    }\PYG{p}{)}
+\end{MintedVerbatim}

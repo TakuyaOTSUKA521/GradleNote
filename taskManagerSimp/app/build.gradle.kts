@@ -45,7 +45,14 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.SerializationDemoKt"
+
+    mainClass = "org.example.MainKt"
+
+    // applicationName = "taskmane"
+}
+
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
 }
 
 tasks.named<Test>("test") {

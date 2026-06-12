@@ -1,6 +1,6 @@
-PWD c:/tex/Note/gradle
+PWD c:/gradle_project/taskManagerSimp/gradleNote
 INPUT c:/texlive/2026/texmf-var/web2c/luahbtex/lualatex.fmt
-INPUT c:/tex/Note/gradle/main.tex
+INPUT c:/gradle_project/taskManagerSimp/gradleNote/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2026/texmf-dist/tex/latex/tex-ini-files/lualatexquotejobname.lua
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/ltluatex.lua
@@ -304,5 +304,16 @@ INPUT C:/Users/wabis/.texlive2026/texmf-var/luatexja/extra_lmmono10-regular.luc
 INPUT ./_minted/776956F45C45D9E65C4F676D5E98D6A6.highlight.minted
 INPUT ./_minted/D07356DF8B721C862E799FF6682F4926.highlight.minted
 INPUT ./_minted/4A4DD534301FFAB2BE938B0BDF2D5D72.highlight.minted
+INPUT ./_minted/0B5DA9800169D2F69113345E7B7D664C.highlight.minted
+INPUT C:/Users/wabis/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmmonolt10-bold.luc
+INPUT C:/Users/wabis/.texlive2026/texmf-var/luatexja/extra_lmmonolt10-bold.luc
+INPUT C:/Users/wabis/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-italic.luc
+INPUT C:/Users/wabis/.texlive2026/texmf-var/luatexja/extra_lmmono10-italic.luc
 INPUT c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./_minted/38E5D7D10B567AA9B44E259FD016A979.highlight.minted
+INPUT ./_minted/6316CADB71E405121C471B6FCCC9C369.highlight.minted
+INPUT ./_minted/38C5604EFB851786CFAB6D780F9AB7DD.highlight.minted
+INPUT ./_minted/FE78D80468692815E17630A50D71CBE6.highlight.minted
+INPUT ./_minted/55BBF740746D6ADE872707DE59BCBEE1.highlight.minted
+INPUT ./_minted/CA1005440D2371707DF3A5D260D76510.highlight.minted
 INPUT ./main.aux

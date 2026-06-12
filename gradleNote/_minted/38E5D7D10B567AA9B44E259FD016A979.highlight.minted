@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }Encoded:\PYG{+w}{ }\PYG{o}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}id\PYGZdq{}}:0,\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}:\PYG{l+s+s2}{\PYGZdq{}Learn Serialization\PYGZdq{}}\PYG{o}{\PYGZcb{}}
+\PYG{+w}{    }Decoded:\PYG{+w}{ }Task\PYG{o}{(}\PYG{n+nv}{id}\PYG{o}{=}\PYG{l+m}{0},\PYG{+w}{ }\PYG{n+nv}{name}\PYG{o}{=}Learn\PYG{+w}{ }Serialization,\PYG{+w}{ }\PYG{k}{done}\PYG{o}{=}\PYG{n+nb}{false}\PYG{o}{)}
+\end{MintedVerbatim}

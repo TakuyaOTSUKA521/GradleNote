@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.4.21)  9 JUN 2026 16:06
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.4.21)  12 JUN 2026 21:34
  system commands enabled.
  file:line:error style messages enabled.
-**c:/tex/Note/gradle/main.tex
-(c:/tex/Note/gradle/main.tex
+**c:/gradle_project/taskManagerSimp/gradleNote/main.tex
+(c:/gradle_project/taskManagerSimp/gradleNote/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -1315,39 +1315,69 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 \pydata@fh@0=\write7
 
 \openout7 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-runsystem(latexminted config  --timestamp 20260609160659 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
+runsystem(latexminted config  --timestamp 20260612213449 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
  (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260609160659 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
+runsystem(latexminted cleanconfig  --timestamp 20260612213449 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
  (./_minted/default.style.minted) (./_minted/B848338EFAF0E78ABD3027AA29A0D89D.highlight.minted(load cache: extra_lmmono10-regular.luc)
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
 (Font)              scaled to size 9.24713pt on input line 1.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 9.24713pt on input line 1.
-) (./_minted/776956F45C45D9E65C4F676D5E98D6A6.highlight.minted) (./_minted/D07356DF8B721C862E799FF6682F4926.highlight.minted) (./_minted/4A4DD534301FFAB2BE938B0BDF2D5D72.highlight.minted) [1
+) (./_minted/776956F45C45D9E65C4F676D5E98D6A6.highlight.minted) (./_minted/D07356DF8B721C862E799FF6682F4926.highlight.minted) (./_minted/4A4DD534301FFAB2BE938B0BDF2D5D72.highlight.minted)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 11.09656pt on input line 76.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 11.09656pt on input line 76.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 11.09656pt on input line 76.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 11.09656pt on input line 76.
+ (./_minted/0B5DA9800169D2F69113345E7B7D664C.highlight.minted
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
+(load cache: extra_lmmonolt10-bold.luc)
+LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <10> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 2.
+LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <10> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 2.
+(load cache: extra_lmmono10-italic.luc)
+LaTeX Font Info:    Font shape `JT3/gt/m/it' in size <10> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 7.
+LaTeX Font Info:    Font shape `JY3/gt/m/it' in size <10> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 9.24713pt on input line 7.
+ [1
 
-{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.aux)
+{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./_minted/38E5D7D10B567AA9B44E259FD016A979.highlight.minted) (./_minted/6316CADB71E405121C471B6FCCC9C369.highlight.minted [2]) (./_minted/38C5604EFB851786CFAB6D780F9AB7DD.highlight.minted) (./_minted/FE78D80468692815E17630A50D71CBE6.highlight.minted) (./_minted/55BBF740746D6ADE872707DE59BCBEE1.highlight.minted [3]) (./_minted/CA1005440D2371707DF3A5D260D76510.highlight.minted) [4] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0C4184F3471F80FF44F4919FD40D9D7C;200.
+(rerunfilecheck)             Checksum: 74302898EB93CA30F00A2F4C69044D1C;534.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54741 strings out of 475900
+ 54877 strings out of 475900
  125244,2373549 words of node,token memory allocated
  1079 words of node memory still in use:
    10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 190 attribute, 65 glue_spec, 28 attribute_list, 2 write, 13 user_defined nodes
-   avail lists: 1:9,2:14813,3:212,4:353,5:192,6:18,7:2638,9:816,10:8,11:39
- 76429 multiletter control sequences out of 65536+600000
- 25 fonts using 20288215 bytes
- 119i,5n,128p,2047b,971s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2026/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf><c:/texlive/2026/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmsans12-regular.otf>
-Output written on main.pdf (1 page, 31617 bytes).
+   avail lists: 1:8,2:31265,3:291,4:776,5:257,6:27,7:4029,9:1033,10:12,11:75
+ 76518 multiletter control sequences out of 65536+600000
+ 31 fonts using 28371687 bytes
+ 119i,5n,128p,2073b,1595s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmmono10-italic.otf><c:/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf><c:/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2026/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf><c:/texlive/2026/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2026/texmf-dist/fonts/opentype/public/lm/lmsans12-regular.otf>
+Output written on main.pdf (4 pages, 76319 bytes).
 
-PDF statistics: 56 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 1048576)
- 24 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 90 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 1048576)
+ 40 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -44,21 +44,21 @@
 \begin{document}
 
 \section{6/4: Gradle+Kotlin のセットアップ}
-\begin{minted}[frame=single]{bash}
+\begin{minted}[frame=lines]{bash}
     gradle --version
 \end{minted}
 でversion の確認を行った，8.x.x だったため，
-\begin{minted}[frame=single]{bash}
+\begin{minted}[frame=lines]{bash}
     gradle init
     ./gradlew wrapper --gradle-version 9.5.1   
 \end{minted}
 を行った．
-\begin{minted}[frame=single]{bash}
+\begin{minted}[frame=lines]{bash}
     ./gradlew run    
 \end{minted}
 で\texttt{Hello World!}の出力が得られた．これは，app/src/main/kotlin/org/example/App.kt 内の\texttt{main()}関数が実行されたものである．
 実行される関数は，app/src/build.gradle.kts 内の
-\begin{minted}[frame=single]{kotlin}
+\begin{minted}[frame=lines]{kotlin}
     application {
         mainClass = "org.example.AppKt"
     }    
@@ -68,4 +68,136 @@
 .../org/example/SerializationDemo.kt を作成して，ライブラリの有効化を試した．
 gradle/libs.versions.toml の\texttt{[plugins]}に追加して，build.gradle.kts の\texttt{plugins}に\texttt{alias()}で追加する．
 同じく\texttt{[libraries]}に追加して，build.gradle.kts の\texttt{dependencies}に\texttt{implementation()}で追加した．
+
+
+\section{6/12: 依存関係の試行}
+editor をIntelliJ に変えて，app/build.gradle.kts にエラーが生じることを解決しようとしたが，できなかった．Hello.kt(App.ktからrename)を実行しても問題なく動くのでeditor 側の表示だけの問題だろう．
+
+\subsection{Serialization を用いたプログラム}
+\begin{minted}[frame=single]{kotlin}
+    import kotlinx.serialization.Serializable
+    import kotlinx.serialization.json.Json
+
+    @Serializable
+    data class Task(
+        // 省略
+    )
+
+    fun main() {
+        val task = Task(
+            id = 0,
+            name = "Learn Serialization"
+        )
+        val json = Json.encodeToString(task)
+        println("Encoded: $json")
+
+        val decoded = Json.decodeFromString<Task>(json)
+        println("Decoded: $decoded")
+    }
+\end{minted}
+
+出力結果は，
+\begin{minted}[frame=lines]{bash}
+    Encoded: {"id":0,"name":"Learn Serialization"}
+    Decoded: Task(id=0, name=Learn Serialization, done=false)
+\end{minted}
+
+因みに，\texttt{./gradlew dependencies}は，\texttt{No configurations}を返した．
+
+上のプログラムでは，プログラム実行中のメモリに各\texttt{task}が保持されている．project directory内にjsonファイルを作成し，そのファイルへの書き込み/書き出しを実装してみた．
+\begin{minted}[frame=single]{kotlin}
+    import kotlinx.serialization.Serializable
+    import kotlinx.serialization.json.Json
+    import java.io.File
+
+    // annotation, data class の定義は省略
+
+    fun main() {
+        val file = File("tasks.json")
+        val tasks = if (file.exists()) {
+            Json.decodeFromString<MutableList<Task>>(file.readText())
+        } else {
+            mutableListOf()
+        }
+
+        val addedTask = Task(
+            id = 0,
+            name = "Learn Serialization"
+        )
+        tasks.add(addedTask)
+
+        file.writeText(Json.encodeToString(tasks))
+        println(tasks)
+    }
+\end{minted}
+出力は，
+\begin{minted}[frame=lines]{bash}
+    [Task(id=0, name=Learn Serialization, done=false)]
+\end{minted}
+前回と出力形式が変わっている．前回は\texttt{println(task)}(\texttt{task}は\texttt{Task}型)，今回はjson ファイルを書き出してそのまま出力している．\texttt{Json.decodeFromString<MutableList<Task>>}から，\texttt{Task}型のリストとして出力されたと考えられる．
+また，\texttt{file=File("task.json)}はファイル名ではなくpath 名を表している．このpathが\texttt{.../app/src}の下から始まっていると予想して，pathを\texttt{"main/kotlin/tesks.json"}とするとエラーが出た．続いて，\texttt{"src/main/kotlin/tasks.json"}とすると正常に動作した．よってこの部分のpathは\texttt{.../app}の下から始まっていることが分かった．
+
+続いて，書き込み/書き出しを分けて実装して，build.gradle.kts/application でのmainClass の切り替えでtasks.json を操作した．
+.../example/AddTask.kt およびListTasks.kt と，.../example/model/Task.kt を追加した．まず，Task.kt にはdata class の定義を書いた．このファイルにだけannotation \texttt{@Serializable}を書く．
+\begin{minted}[frame=single]{kotlin}
+    import kotlinx.serialization.Serializable
+
+    @Serializable
+    data class Task(
+        val id: Int,
+        val name: String,
+        val done: Boolean = false
+    )
+\end{minted}
+addTask.kt には，ファイルの発見/作成と書き込みを実装する．
+\begin{minted}[frame=single]{kotlin}
+    import kotlinx.serialization.json.Json
+    import java.io.File
+    import org.example.model.Task
+
+    fun main() {
+        val file = File("src/main/kotlin/data/tasks.json")
+        // 変更できる(mutable)リストとしてtask.json を書き出し
+        val tasks = if (file.exists()) {
+            Json.decodeFromString<MutableList<Task>>(file.readText())
+        } else {
+            mutableListOf()
+        }
+
+        val addedTask = Task(
+                id = 1,
+                name = "Clean the Room"
+                )
+        // リストの変更
+        tasks.add(addedTask)
+        // リスト → json ファイル
+        file.writeText(Json.encodeToString(tasks))
+
+        println("Added. Total: ${tasks.size}")
+    }
+\end{minted}
+
+ListTasks.kt には，ファイルの発見と書き出しを実装する．
+\begin{minted}[frame=single]{kotlin}
+    import kotlinx.serialization.json.Json
+    import org.example.model.Task
+    import java.io.File
+
+    fun main() {
+        val file = File("src/main/kotlin/data/tasks.json")
+        if (!file.exists()) {
+            println("No tasks found.")
+            return
+        }
+
+        // 読込だけの(mutable でない)リストとしてtasks.json を書き出し
+        val tasks = Json.decodeFromString<List<Task>>(file.readText())
+        // tasks の各要素をit として受ける
+        tasks.forEach { println("[${it.id}] ${it.name} - done: ${it.done}") }
+    }
+\end{minted}
+
+
+
+
 \end{document}

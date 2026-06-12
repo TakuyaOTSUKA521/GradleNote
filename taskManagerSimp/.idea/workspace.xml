@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46473845-3e30-4f3f-8282-bd822fe205e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/org/example/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/org/example/model/Task.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradleNote/_minted/_FAD58DE7366495DB4650CFEFAC2FCD61.index.minted" beforeDir="false" afterPath="$PROJECT_DIR$/../gradleNote/_minted/_FAD58DE7366495DB4650CFEFAC2FCD61.index.minted" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradleNote/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../gradleNote/main.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradleNote/main.fdb_latexmk" beforeDir="false" afterPath="$PROJECT_DIR$/../gradleNote/main.fdb_latexmk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradleNote/main.fls" beforeDir="false" afterPath="$PROJECT_DIR$/../gradleNote/main.fls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradleNote/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/../gradleNote/main.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradleNote/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../gradleNote/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradleNote/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../gradleNote/main.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradleNote/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../gradleNote/main.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradleNote/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../gradleNote/main.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/org/example/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/org/example/Hello.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/org/example/SerializationDemo.kt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/src/main/kotlin/data/tasks.json" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3F1UI4yHO9z0rp0WnpxJ5u7HJvb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\gradle_project\taskManagerSimp\taskManagerSimp\app\src\main\kotlin" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46473845-3e30-4f3f-8282-bd822fe205e5" name="Changes" comment="" />
+      <created>1781241985370</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1781241985370</updated>
+    </task>
+    <servers />
+  </component>
+</project>

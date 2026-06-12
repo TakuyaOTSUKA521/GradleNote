@@ -1,0 +1,25 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k}{import}\PYG{+w}{ }\PYG{n+nn}{kotlinx.serialization.Serializable}
+\PYG{+w}{    }\PYG{k}{import}\PYG{+w}{ }\PYG{n+nn}{kotlinx.serialization.json.Json}
+\PYG{+w}{    }\PYG{k}{import}\PYG{+w}{ }\PYG{n+nn}{java.io.File}
+
+\PYG{+w}{    }\PYG{c+c1}{// annotation, data class の定義は省略}
+
+\PYG{+w}{    }\PYG{k+kd}{fun}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{val}\PYG{+w}{ }\PYG{n+nv}{file}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{File}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}tasks.json\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k+kd}{val}\PYG{+w}{ }\PYG{n+nv}{tasks}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{file}\PYG{p}{.}\PYG{n+na}{exists}\PYG{p}{())}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{Json}\PYG{p}{.}\PYG{n+na}{decodeFromString}\PYG{o}{\PYGZlt{}}\PYG{n}{MutableList}\PYG{o}{\PYGZlt{}}\PYG{n}{Task}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{p}{(}\PYG{n}{file}\PYG{p}{.}\PYG{n+na}{readText}\PYG{p}{())}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{mutableListOf}\PYG{p}{()}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{        }\PYG{k+kd}{val}\PYG{+w}{ }\PYG{n+nv}{addedTask}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Task}\PYG{p}{(}
+\PYG{+w}{            }\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{name}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Learn Serialization\PYGZdq{}}
+\PYG{+w}{        }\PYG{p}{)}
+\PYG{+w}{        }\PYG{n}{tasks}\PYG{p}{.}\PYG{n+na}{add}\PYG{p}{(}\PYG{n}{addedTask}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{n}{file}\PYG{p}{.}\PYG{n+na}{writeText}\PYG{p}{(}\PYG{n}{Json}\PYG{p}{.}\PYG{n+na}{encodeToString}\PYG{p}{(}\PYG{n}{tasks}\PYG{p}{))}
+\PYG{+w}{        }\PYG{n}{println}\PYG{p}{(}\PYG{n}{tasks}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}
